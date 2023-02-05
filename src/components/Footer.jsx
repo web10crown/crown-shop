@@ -14,12 +14,12 @@ const Container = styled.div`
 	background-image: url("/assets/images/footer.jpg");
 	color: white;
 	height: 450px;
-	padding: 20px;
+	padding: 10px;
 	font-size: 25px;
 	font-weight: 200;
 `;
 const Wrapper = styled.div`
-	padding: 20px;
+	padding: 10px;
 	height: 95%;
 	display: flex;
 	flex-direction: column;
