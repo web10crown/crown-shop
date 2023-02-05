@@ -185,12 +185,12 @@ const Footer = () => {
 					<Right>
 						<Social>Lets Chat</Social>
 						<Accounts>
-							<Link to={{  pathname:"https://www.linkedin.com/in/neeraj-rana-387a53259"}} target="_blank">
+							<a href="https://www.linkedin.com/in/neeraj-rana-387a53259" target="_blank">
 								<Icons src="/assets/icons/linkedin.png" />
-							</Link>
-							<Link to={{  pathname:"https://github.com/web10crown"}} target="_blank">
+							</a>
+							<a href="https://github.com/web10crown" target="_blank">
 								<Icons src="/assets/icons/github.png" />
-							</Link>
+							</a>
 							<Link to="/">
 								<Icons src="/assets/icons/telegram.png" />
 							</Link>
