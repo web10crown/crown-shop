@@ -4,14 +4,13 @@ import { mobile } from "../responsive";
 import { Link } from "react-router-dom";
 import { logOut } from "../redux/userRedux";
 import { useDispatch } from "react-redux";
-import { getProducts } from "../redux/productRedux";
-import { publicRequest } from "../requestMethods";
 import { toast } from "react-toastify";
 import { useState } from "react";
 
 const Container = styled.div`
 	margin-top: 5px;
-	background-image: url("/assets/images/footer.jpg");
+	background-color: #000000e3;
+
 	color: white;
 	height: 450px;
 	padding: 10px;
@@ -126,15 +125,7 @@ const Icons = styled.img`
 const Footer = () => {
 	const [feedback, setFeedback] = useState(null);
 	const dispatch = useDispatch();
-	const getData = async () => {
-		try {
-			const res = await publicRequest.get("/products");
-			dispatch(getProducts(res.data));
-		} catch (err) {
-			console.log(err);
-		}
-	};
-	getData();
+
 	const feedbackHandler = () => {
 		if (feedback) {
 			toast.success("Thanks for your feedback");
@@ -185,12 +176,12 @@ const Footer = () => {
 					<Right>
 						<Social>Lets Chat</Social>
 						<Accounts>
-							<a href="https://www.linkedin.com/in/neeraj-rana-387a53259" target="_blank">
+							<Link to="/">
 								<Icons src="/assets/icons/linkedin.png" />
-							</a>
-							<a href="https://github.com/web10crown" target="_blank">
+							</Link>
+							<Link to="/">
 								<Icons src="/assets/icons/github.png" />
-							</a>
+							</Link>
 							<Link to="/">
 								<Icons src="/assets/icons/telegram.png" />
 							</Link>

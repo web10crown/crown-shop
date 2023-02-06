@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import { mobile } from "../responsive";
 import { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { publicRequest } from "../requestMethods";
+import { useDispatch } from "react-redux";
+import { getProducts } from "../redux/productRedux";
 const Container = styled.div`
 	width: 100%;
 	height: 85vh;
@@ -102,7 +104,22 @@ const RightArrow = styled.img`
 `;
 const Crousal = () => {
 	const [slideIndex, setIndex] = useState(0);
-	const products = useSelector((state) => state.products.products);
+	const [products, setProducts] = useState([]);
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		const getData = async () => {
+			try {
+				const res = await publicRequest.get("/products");
+				setProducts(res.data);
+				dispatch(getProducts(res.data));
+			} catch (err) {
+				console.log(err);
+			}
+		};
+		getData();
+	}, [dispatch]);
+
 	const handleClick = (name) => {
 		if (name === "right") {
 			setIndex(slideIndex < 2 ? slideIndex + 1 : 0);

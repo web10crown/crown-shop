@@ -81,7 +81,7 @@ const AllProducts = () => {
 	return (
 		<Container>
 			<Wrapper>
-				{products.slice().map((p) => (
+				{products.map((p) => (
 					<Product key={p._id}>
 						<Actions>
 							<Link to={`/product/${p._id}`}>

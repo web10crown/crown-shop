@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
+import { publicRequest } from "../requestMethods";
 
 const Container = styled.div`
 	margin-top: 5px;
@@ -79,11 +79,23 @@ const Cart = styled.img`
 `;
 
 const Products = ({ filters, sort, cat }) => {
-	const products = useSelector((state) => state.products.products);
+	const [products, setProducts] = useState([]);
 	const [filteredProducts, setFiltered] = useState([]);
 
 	useEffect(() => {
-		products &&
+		const getData = async () => {
+			try {
+				const res = await publicRequest.get("/products");
+				setProducts(res.data);
+			} catch (err) {
+				console.log(err);
+			}
+		};
+		getData();
+	}, []);
+
+	useEffect(() => {
+		filters &&
 			setFiltered(
 				products.filter((item) =>
 					Object.entries(filters).every(([key, value]) =>
