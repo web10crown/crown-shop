@@ -14,7 +14,7 @@ const Home = () => {
 		} else {
 			toast.success("Welcome User");
 		}
-	}, [user]);
+	}, []);
 	const filters = {};
 	const sort = "newest";
 	return (
