@@ -1,0 +1,14 @@
+{
+  "algorithms": ["br", "gz"],
+  "filetypes": [
+    ".html",
+    ".js",
+    ".jsx",
+    ".css",
+    ".svg",
+    ".png",
+    ".jpg",
+    ".jpeg"
+  ],
+  "directory": "/build"
+}
