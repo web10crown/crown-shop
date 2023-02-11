@@ -176,15 +176,15 @@ const Footer = () => {
 					<Right>
 						<Social>Lets Chat</Social>
 						<Accounts>
-							<Link to="/">
+							<a to="https://www.linkedin.com/in/neeraj-rana-387a53259">
 								<Icons src="/assets/icons/linkedin.png" />
-							</Link>
-							<Link to="/">
+							</a>
+							<a to="https://github.com/web10crown">
 								<Icons src="/assets/icons/github.png" />
-							</Link>
-							<Link to="/">
+							</a>
+							<a to="/">
 								<Icons src="/assets/icons/telegram.png" />
-							</Link>
+							</a>
 							<Link to="/admin">
 								<SettingsSharp
 									style={{ color: "white", fontSize: "40px" }}
