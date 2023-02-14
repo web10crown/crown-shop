@@ -11,6 +11,7 @@ const Container = styled.div`
 	height: 95px;
 position:sticky;
 top:0;
+z-index:7;
 
 `;
 const Wrapper = styled.div`
