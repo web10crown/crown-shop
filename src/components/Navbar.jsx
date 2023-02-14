@@ -9,6 +9,9 @@ import { useState } from "react";
 
 const Container = styled.div`
 	height: 95px;
+position:sticky;
+top:0;
+
 `;
 const Wrapper = styled.div`
 	height: 70%;
