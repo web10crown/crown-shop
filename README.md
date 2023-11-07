@@ -1,4 +1,3 @@
-```markdown
 # Crown Shop - MERN Stack Web Application
 
 Welcome to the Crown Shop project, a MERN (MongoDB, Express.js, React, Node.js) stack web application. This project is created and maintained by web10crown and offers a comprehensive e-commerce platform for buying and selling various products. Key features include Redux for state management, JWT for authentication, CryptoJS for encryption, MongoDB for data storage, Styled Components for styling, and Stripe Checkout for secure payment processing.
