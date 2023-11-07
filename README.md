@@ -101,4 +101,4 @@ Your Crown Shop website should now be up and running. You can access it in your 
 
 
 This README file provides an overview of your Crown Shop project, including its features, technology stack, setup instructions, and more. Customize the content to match your project's specific details and requirements.
-```
+
